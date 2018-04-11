@@ -15,3 +15,31 @@ do {
       }//cierre else
     }while((ascii<65 || ascii>90) && (ascii<97 || ascii>122));//mientras no se ingresen letras, pedira ingrasar una palabra.
 }while(msj==='');//mientras no se ingrese nada, pedira ingresar una palabra.
+
+
+function cipher (message){//en esta funcion se ingresara al msj del usuario para pasarlo a un array de numeros de acuero al codigo Ascii
+  var ascii;
+  var arrayAscii= [];
+
+    for(var j= 0; j<message.length; j++){//en itera sobre cada elemento del mensaje que contiene letras para posteriormente convertirlo a Ascii y obtener un array de numeros
+      ascii=message.charCodeAt(j);
+        arrayAscii.push(ascii);
+    }//cierre for
+    return arrayAscii;
+}//cierre fuction
+
+descipher(cipher(msj));
+
+function decipher (msjAscii){
+  var ascii;
+  var resultStr='';
+  var finalStr='';
+
+    for (var k=0; k<msjAscii.length; k++){
+      ascii=(msjAscii[k] -65 + 33) %26 +65;
+        resultStr=String.fromCharCode(ascii);
+          finalStr += resultStr;
+    }//for
+    alert('Tu frase codificada es: ' + finalStr);
+    return finalStr;
+}//function
