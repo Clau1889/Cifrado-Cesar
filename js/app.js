@@ -36,14 +36,20 @@ function cipher (message){//en esta funcion se ingresara al msj del usuario para
             resultStr=String.fromCharCode(auxAscii);
              //console.log(resultStr);
                finalStr += resultStr;
-                console.log(finalStr);
+                //console.log(finalStr);
           }//cierre for in k
+          alert('Tu codigo cifrado es: ' + finalStr);
     return finalStr;
+
 }//cierre fuction
-
 cipher(msj);
+/*
+function descipher (msjCipher){
 
-function decipher (msjAscii){
 
 
+
+  }//cierre for
 }//function
+descipher(cipher(msj));
+*/
