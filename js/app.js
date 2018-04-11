@@ -20,26 +20,30 @@ do {
 function cipher (message){//en esta funcion se ingresara al msj del usuario para pasarlo a un array de numeros de acuero al codigo Ascii
   var ascii;
   var arrayAscii= [];
+  var auxAscii;
+  var resultStr='';
+  var finalStr='';
 
     for(var j= 0; j<message.length; j++){//en itera sobre cada elemento del mensaje que contiene letras para posteriormente convertirlo a Ascii y obtener un array de numeros
       ascii=message.charCodeAt(j);
         arrayAscii.push(ascii);
-    }//cierre for
-    return arrayAscii;
+        //console.log(arrayAscii);
+    }//cierre for en j
+
+      for (var k=0; k<arrayAscii.length; k++){
+         auxAscii=((arrayAscii[k]) - 65 + 33) %26 +65;
+          //console.log(auxAscii);
+            resultStr=String.fromCharCode(auxAscii);
+             //console.log(resultStr);
+               finalStr += resultStr;
+                console.log(finalStr);
+          }//cierre for in k
+    return finalStr;
 }//cierre fuction
 
-descipher(cipher(msj));
+cipher(msj);
 
 function decipher (msjAscii){
-  var ascii;
-  var resultStr='';
-  var finalStr='';
 
-    for (var k=0; k<msjAscii.length; k++){
-      ascii=(msjAscii[k] -65 + 33) %26 +65;
-        resultStr=String.fromCharCode(ascii);
-          finalStr += resultStr;
-    }//for
-    alert('Tu frase codificada es: ' + finalStr);
-    return finalStr;
+
 }//function
