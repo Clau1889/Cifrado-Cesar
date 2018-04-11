@@ -50,4 +50,4 @@ Conoce mas, da click al siguiente vinculo : [Cifrado Cesar](https://www.sangakoo
 ### Diagrama de flujo
 ###### A continuacion se representa de manera grafica la secuencia de flujo del proyecto:
 
-![Diagrama de flujo Cifrado Cesar](assets/img/diagrama-flujo-cifrado-Cesar.png)
+![Diagrama de flujo Cifrado Cesar](assets/img/Diagrama-flujo-cifrado-Cesar.png)
